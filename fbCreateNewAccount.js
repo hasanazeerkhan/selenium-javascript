@@ -3,7 +3,7 @@ const chrome = require("selenium-webdriver/chrome");
 const option = new chrome.Options();
 const driver = new Builder()
   .forBrowser("chrome")
-  .setChromeOptions("option")
+  .setChromeOptions(option)
   .build();
 
 async function fbLogin() {
