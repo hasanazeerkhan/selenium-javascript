@@ -1,3 +1,5 @@
+//Selenium + Javascript code to do some basic functionalities in demoqa website
+
 const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const assert = require("assert");

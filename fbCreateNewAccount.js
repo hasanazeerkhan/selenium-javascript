@@ -1,3 +1,5 @@
+//A small snippet of code to create new account in facebook
+
 const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const option = new chrome.Options();
