@@ -1,6 +1,6 @@
 🚀 Welcome to the Selenium-JavaScript repository! This repository is a collection of useful Selenium snippets and code examples to help you with web automation testing using Selenium WebDriver. 🌐
 
-🔍 As a software tester, I understand the power and flexibility of Selenium for automating web testing. This repository aims to provide a curated set of Selenium snippets and code snippets that can be used as building blocks for your test automation projects.
+🔍 As a software tester, I understand the power and flexibility of Selenium for automated web testing. This repository aims to provide a curated set of Selenium snippets and code snippets that can be used as building blocks for your test automation projects.
 
 🧩 In this repository, you'll find a variety of Selenium snippets that demonstrate common automation tasks, such as navigating web pages, interacting with elements, performing assertions, handling pop-ups, and more. These snippets are designed to be concise, reusable, and easy to understand.
 
