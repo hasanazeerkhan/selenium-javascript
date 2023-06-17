@@ -1,0 +1,26 @@
+{
+  "name": "selenium-javascript",
+  "version": "1.0.0",
+  "description": "A collection of automated tests for the popular  websites, built using Selenium and JavaScript",
+  "main": "demoQA.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hasanazeerkhan/selenium-javascript.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Selenium"
+  ],
+  "author": "Mohammed Hasan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hasanazeerkhan/selenium-javascript/issues"
+  },
+  "homepage": "https://github.com/hasanazeerkhan/selenium-javascript#readme",
+  "dependencies": {
+    "selenium-webdriver": "^4.10.0"
+  }
+}
