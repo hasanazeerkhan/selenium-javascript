@@ -14,13 +14,33 @@
 
 Connect with me on LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/hasanazeerkhan/)
 
+## Technologies used
+
+- [JavaScript](https://www.javascript.com/)
+- [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
+
+## Getting started
+
+To get started with the project, you need to have Java and Maven installed on your system. You can follow the steps below to run the project:
+
+1. Clone the repository to your local machine using the command:
+```
+git clone https://github.com/hasanazeer/selenium-practice-form.git
+```
+2. Open the project in your preferred IDE 
+```
+I used VS Code
+```
+3. Run the below command to execute the tests
+```
+npm test
+``` 
 
 ## Features
 
 - **Easy-to-Use Snippets:** The snippets in this repository are designed to be easy to understand and use, making it convenient for both beginners and experienced testers.
 - **Common Automation Scenarios:** The snippets cover common automation scenarios such as navigating web pages, interacting with elements, handling alerts, and more.
 - **Modular and Reusable:** Each snippet is designed to be modular and can be easily integrated into your existing test scripts or projects.
-- **Cross-Browser Compatibility:** The snippets are compatible with popular web browsers, allowing you to write tests that can be executed across different browser environments.
 
 ## Usage
 
@@ -32,7 +52,40 @@ To use the snippets in your Selenium projects, follow these steps:
 4. Copy the snippet code and integrate it into your Selenium test script.
 5. Customize the snippet code as per your specific test requirements.
 
+## Contributing
+
+Contributions to the project are welcome! To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch with your changes: 
+```
+git checkout -b my-branch
+```
+3. Make changes and commit them:
+```
+git commit -m "my changes"
+```
+4. Push to the branch: 
+```
+git push origin my-branch
+```
+5. Create a pull request.
+## Project structure
+
+The project follows a simple structure with the following directories:
+
+```
+├── node_modules
+│── package-lock.json
+│── package.json
+│── demoQA.js
+│── fbCreateNewAccount.js
+│── .gitignore
+│── README.md
+```
+
 Feel free to explore, modify, and enhance the snippets to fit your automation needs. Contributions to this repository are also welcome! If you have additional snippets or improvements, feel free to open a pull request.
 
 Enjoy using these basic Selenium snippets to streamline your web automation testing!
+Happy coding!
 
