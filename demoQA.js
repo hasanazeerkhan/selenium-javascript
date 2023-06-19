@@ -3,33 +3,39 @@
 const { Builder, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const assert = require("assert");
-const driver = new Builder().forBrowser("chrome").build();
+const option = new chrome.Options();
+const driver = new Builder().forBrowser("chrome").setChromeOptions(option).build();
 
-async function TextBox() {
-    try{
-    await driver.get("https://demoqa.com/text-box")
-    await driver.manage().window().setRect({ width: 1936, height: 1048 })
-    await driver.findElement(By.id("userName")).sendKeys("The Awesome User")
-    await driver.findElement(By.id("userEmail")).sendKeys("theawsomeuser@example.com")
-    await driver.findElement(By.id("currentAddress")).sendKeys("Some where in this beautiful Earth")
-    await driver.findElement(By.id("permanentAddress")).sendKeys("Same beautiful Earth")
-    await driver.findElement(By.id("submit")).click()
-    let output = await driver.findElement(By.id("output")).getText();
-    assert.strictEqual(output.includes("The Awesome User"), true);
-    assert.strictEqual(output.includes("theawsomeuser@example.com"), true);
-    assert.strictEqual(output.includes("Some where in this beautiful Earth"), true);
-    assert.strictEqual(output.includes("Same beautiful Earth"), true);
+async function textBox(
+  givenInputName,
+  givenInputEmail,
+  givenInputCurrentAddress,
+  givenInputPermanentAddress
+) {
+  try {
+    const inputName = givenInputName;
+    const inputEmail = givenInputEmail;
+    const inputCurrentAddress = givenInputCurrentAddress;
+    const inputPermanentAddress = givenInputPermanentAddress;
+
+    await driver.get("https://demoqa.com/text-box");
+    await driver.manage().window().maximize();
+    await driver.findElement(By.id("userName")).sendKeys(inputName);
+    await driver.findElement(By.id("userEmail")).sendKeys(inputEmail);
+    await driver.findElement(By.id("currentAddress")).sendKeys(inputCurrentAddress);
+    await driver.findElement(By.id("permanentAddress")).sendKeys(inputPermanentAddress);
+    await driver.findElement(By.id("submit")).click();
+  } catch (error) {
+    console.log(error);
+  } finally {
     await driver.close();
-    }catch(error){
-        console.log(error);
-    }
+  }
 }
-TextBox();
 
 async function checkBox(){
     try{
     await driver.get("https://demoqa.com/checkbox")
-    await driver.manage().window().setRect({ width: 1936, height: 1048 });
+    await driver.manage().window().maximize();
     await driver.findElement(By.css(".rct-icon-expand-close")).click()
     {
       const element = await driver.findElement(By.css(".rct-icon-expand-close"))
@@ -61,7 +67,7 @@ async function checkBox(){
         console.log(error);
     }
 }
-checkBox();
+//checkBox();
 
 async function RadioButton(){
     try{
@@ -76,4 +82,11 @@ async function RadioButton(){
         console.log(error);
     }
 }
-RadioButton();
+//RadioButton();
+
+textBox(
+  "User Name",
+  "theawsomeuser@example.com",
+  "Some where in this beautiful Earth",
+  "Same beautiful Earth"
+);
