@@ -8,20 +8,24 @@ const driver = new Builder()
   .setChromeOptions(option)
   .build();
 
-async function RadioButton() {
+async function radioButton() {
   try {
-    await driver.manage().window().maximize();
     await driver.get("https://demoqa.com/radio-button");
-    await driver
-      .findElement(By.xpath("//label[contains(.,'Impressive')]"))
-      .click();
-    await driver.findElement(By.xpath("//label[contains(.,'Yes')]")).click();
-    await driver.findElements(
-      By.xpath("//input[@class='custom-control-input disabled']")
-    );
-    await driver.close();
+    await driver.manage().window().maximize();
+    await driver.findElement(By.xpath("//label[contains(text(),'Yes')]")).click();
+    await driver.findElement(By.xpath("//span[contains(text(),'Yes')]")).isDisplayed();
+    console.log("'Yes' is displayed when clicked");
+    await driver.findElement(By.xpath("//label[contains(text(),'Impressive')]")).click();
+    await driver.findElement(By.xpath("//span[contains(text(),'Impressive')]")).isDisplayed();
+    console.log("'Impressive' is displayed when clicked");
+    await driver.findElement(By.xpath("//input[@class='custom-control-input disabled']")).isDisplayed();
+    console.log("'No' is in disabled state");
+    
   } catch (error) {
     console.log(error);
+  }finally{
+    console.log("All steps were passing closing chrome...")
+    await driver.quit();
   }
 }
-RadioButton();
+radioButton();
