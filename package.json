@@ -2,7 +2,6 @@
   "name": "selenium-javascript",
   "version": "1.0.0",
   "description": "A collection of automated tests for the popular  websites, built using Selenium and JavaScript",
-  "main": "demoQA.js",
   "scripts": {
     "test": "run test"
   },
