@@ -35,6 +35,7 @@ async function textBox(
   } catch (error) {
     console.log(error);
   } finally {
+    console.log("All steps were passing closing chrome...");
     await driver.quit();
   }
 }
