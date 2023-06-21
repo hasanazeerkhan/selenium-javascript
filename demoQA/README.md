@@ -35,7 +35,14 @@ The project follows a simple structure with the following directories:
     │── selectable.js
     │── sortable.js
 
-
-
 ├── Widgets
+    │── accordian.js
+    │── auto-complete.js
+    │── date-picker.js
+    │── menu.js
+    │── progress-bar.js
+    │── select-menu.js
+    │── slider.js
+    │── tabs.js
+    │── tool-tips.js
 ```
