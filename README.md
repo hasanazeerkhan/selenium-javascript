@@ -15,9 +15,7 @@
 Connect with me on LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/hasanazeerkhan/)
 
 ## Technologies used
-
-- [JavaScript](https://www.javascript.com/)
-- [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/)
+<p align="left"> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="80" height="80"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="80" height="80"/> </a> </p>
 
 ## Getting started
 
