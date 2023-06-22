@@ -21,6 +21,7 @@ async function fbLogin() {
     const gender = "Female";
 
     await driver.get(url);
+    driver.manage().window().maximize();
     const actualTitle = await driver.getTitle();
     const expectedTitle = "Facebook – log in or sign up";
 
@@ -34,15 +35,19 @@ async function fbLogin() {
     await createNewAccount.click();
     const inputFirstName = await driver.findElement(By.xpath("//input[@name='firstname']"));
     await inputFirstName.sendKeys(firstName);
+    console.log('Updated First Name');
 
     const inputLastName = await driver.findElement(By.xpath("//input[@name='lastname']"));
     await inputLastName.sendKeys(lastName);
+    console.log("Updated Last Name");
 
     const inputMobileNumber = await driver.findElement(By.xpath("//input[@name='reg_email__']"));
     await inputMobileNumber.sendKeys(mobileNumber);
+    console.log("Updated Mobile Number");
 
     const inputPassword = await driver.findElement(By.xpath("//input[@name='reg_passwd__']"));
     await inputPassword.sendKeys(password);
+    console.log("Updated Password")
 
     const inputDayForDob = await driver.findElement(By.xpath(`//*[@title='Day']/option[@value='${dayInDob}']`));
     await inputDayForDob.click();
@@ -71,6 +76,7 @@ async function fbLogin() {
 
     const inputYearForDob = await driver.findElement(By.xpath(`//*[@title='Year']/option[@value='${yearInDob}']`));
     await inputYearForDob.click();
+    console.log("Updated Date Of Birth");
 
     {
         var selectableGender = gender;
@@ -84,13 +90,16 @@ async function fbLogin() {
     }
     const inputGender = await driver.findElement(By.xpath(`//input[@name='sex' and @value='${j}']`));
     await inputGender.click();
+    console.log("Updated Gender");
     
     const signUpButton = await driver.findElement(By.xpath("//button[@type='submit' and @name='websubmit']"));
     signUpButton.click();
+    console.log("Submitting given inputs");
 
   } catch (error) {
     console.log("An error has been occurred ", error);
   } finally {
+    console.log('Closing chrome....')
     await driver.quit();
   }
 }
