@@ -8,27 +8,42 @@ async function practiceForm(){
         const url = "https://demoqa.com/automation-practice-form";
         const firstName = "MyFirst";
         const lastName = "MyLast";
-        const gender = "Female";
+        const gender = "Male";
         const email = "first.last@example.com"
         const mobileNumber = "+910000000000";
         const dateOfBirth = "24/06/2023";
         const subjects = "Maths";
         const hobbies = "Sports";
-        const currentAddress = "Address Line One";
+        const currentAddress = "17 My House, Delhi, NCR";
         const state = "NCR";
         const city = "Delhi"
         
         console.log('Executing tests');
 
         await driver.get(url);
+        await driver.manage().window().maximize();
         const inputFirstName = await driver.findElement(By.id("firstName"));
         await inputFirstName.sendKeys(firstName);
         const inputLastName = await driver.findElement(By.id("lastName"));
         await inputLastName.sendKeys(lastName);
-        const inputGender = await driver.findElement(By.id("first_name"));
-        await inputGender.sendKeys(gender);
-        const inputEmail = await driver.findElement(By.id("userEmail"));
+        const inputEmail = await driver.findElement(By.xpath("//input[@id='userEmail']"));
         await inputEmail.sendKeys(email);
+        var selectableGender = gender;
+        var j = 1;
+        switch (selectableGender) {
+          case "Female":
+            j = 1;
+            break;
+          case "Male":
+            j = 2;
+            break;
+          case "Custom":
+            j = 3;
+            break;
+        }
+        const inputGender = await driver.findElement(By.xpath(`//input[@id='gender-radio-${j}']`));
+        await inputGender.click();
+        
         const inputMobileNumber = await driver.findElement(By.id("userNumber"));
         await inputMobileNumber.sendKeys(mobileNumber);
         const inputDateOfBirth = await driver.findElement(By.id("dateOfBirthInput"));
