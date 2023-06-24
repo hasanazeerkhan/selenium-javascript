@@ -5,8 +5,10 @@ const driver = new Builder().forBrowser('chrome').setChromeOptions(option).build
 
 async function browserWindows(){
     try{
-        console.log('Executing tests');
-        await driver.get('');
+        const url = "https://demoqa.com/browser-windows";
+        console.log("Executing tests");
+        await driver.get(url);
+        await driver.manage().window().maximize();
     }catch(error){
         console.log("An error has occurred: "+error)
     }finally{
