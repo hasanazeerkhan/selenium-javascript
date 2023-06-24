@@ -5,8 +5,10 @@ const driver = new Builder().forBrowser('chrome').setChromeOptions(option).build
 
 async function modelDialogs(){
     try{
-        console.log('Executing tests');
-        await driver.get('');
+        const url = "https://demoqa.com/modal-dialogs";
+        console.log("Executing tests");
+        await driver.get(url);
+        await driver.manage().window().maximize();
     }catch(error){
         console.log("An error has occurred: "+error)
     }finally{
