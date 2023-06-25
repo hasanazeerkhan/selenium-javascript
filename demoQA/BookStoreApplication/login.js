@@ -5,8 +5,14 @@ const driver = new Builder().forBrowser('chrome').setChromeOptions(option).build
 
 async function login(){
     try{
+        const url = "https://demoqa.com/login";
+        const firstName = "FirstName";
+        const lastName = "LastName";
+        const userName = "MyUserName";
+        const password = "MySecretPassword";
         console.log('Executing tests');
-        await driver.get('');
+        await driver.get(url);
+        await driver.manage().window().maximize();
     }catch(error){
         console.log("An error has occurred: "+error)
     }finally{
