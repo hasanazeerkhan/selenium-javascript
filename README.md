@@ -17,23 +17,6 @@ Connect with me on LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/hasa
 ## Technologies used
 <p align="left"> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="80" height="80"/> </a> <a href="https://www.selenium.dev" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/detain/svg-logos/780f25886640cef088af994181646db2f6b1a3f8/svg/selenium-logo.svg" alt="selenium" width="80" height="80"/> </a> </p>
 
-## Getting started
-
-To get started with the project, you need to have Java and Maven installed on your system. You can follow the steps below to run the project:
-
-1. Clone the repository to your local machine using the command:
-```
-git clone https://github.com/hasanazeer/selenium-practice-form.git
-```
-2. Open the project in your preferred IDE 
-```
-I used VS Code
-```
-3. Run the below command to execute the tests
-```
-npm test
-``` 
-
 ## Features
 
 - **Easy-to-Use Snippets:** The snippets in this repository are designed to be easy to understand and use, making it convenient for both beginners and experienced testers.
@@ -76,7 +59,7 @@ The project follows a simple structure with the following directories:
 ├── node_modules
 │── package-lock.json
 │── package.json
-│── demoQA.js
+│── demoQA
 │── fbCreateNewAccount.js
 │── .gitignore
 │── README.md
