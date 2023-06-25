@@ -9,6 +9,7 @@ async function browserWindows(){
         console.log("Executing tests");
         await driver.get(url);
         await driver.manage().window().maximize();
+        console.log("Maximized screen");
     }catch(error){
         console.log("An error has occurred: "+error)
     }finally{
