@@ -10,33 +10,33 @@ async function alerts(){
         await driver.get(url);
         await driver.manage().setTimeouts({ implicit: 4000 });
         await driver.manage().window().maximize();
-        console.log('Passes step 1');
+        console.log('Maximized screen');
         const alertButton = await driver.findElement(By.xpath("//button[@id='alertButton']"))
         await alertButton.click();
         const alert = await driver.switchTo().alert();
         await driver.wait(until.alertIsPresent(alert), 5000);
         await alert.accept();
-        console.log("Passes step 2");
+        console.log("Passing alert button");
         const timerAlertButton = await driver.findElement(By.xpath("//button[@id='timerAlertButton']"))
         await timerAlertButton.click();
         await driver.wait(until.alertIsPresent(timerAlertButton), 5000);
         await alert.accept();
-        console.log("Passes step 3");
+        console.log("Passing timer alert button");
         const confirmButton = await driver.findElement(By.xpath("//button[@id='confirmButton']"))
         await confirmButton.click();
         await driver.wait(until.alertIsPresent(confirmButton), 5000);
         await alert.dismiss();
-        console.log("Passes step 4");
+        console.log("Passing confirm button");
         await confirmButton.click();
         await driver.wait(until.alertIsPresent(confirmButton), 5000);
         await alert.accept();
-        console.log("Passes step 5");
+        console.log("Passing prompt button");
         const promtButton = await driver.findElement(By.xpath("//button[@id='promtButton']"))
         await promtButton.click();
         await driver.wait(until.alertIsPresent(promtButton), 5000);
-        await alert.sendKeys("Mohammed Hasan");
+        await alert.sendKeys("Passing input to prompt");
         await alert.accept();
-        console.log("Passes step 6");
+        console.log("Passing sent input");
     }catch(error){
         console.log("An error has occurred: "+error)
     }finally{
