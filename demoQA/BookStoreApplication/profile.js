@@ -5,8 +5,12 @@ const driver = new Builder().forBrowser('chrome').setChromeOptions(option).build
 
 async function profile(){
     try{
-        console.log('Executing tests');
-        await driver.get('');
+        const url = "https://demoqa.com/profile";
+        console.log("Executing tests");
+        await driver.get(url);
+        await driver.manage().window().maximize();
+        console.log("Maximized screen");
+        
     }catch(error){
         console.log("An error has occurred: "+error)
     }finally{
