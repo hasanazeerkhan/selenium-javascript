@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/hasanazeerkhan/selenium-javascript#readme",
   "dependencies": {
-    "selenium-webdriver": "^4.10.0"
+    "chromedriver": "^129.0.0",
+    "selenium-webdriver": "^4.24.1"
   }
 }
