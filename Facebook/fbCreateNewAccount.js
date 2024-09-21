@@ -16,23 +16,7 @@ enterAccountDetails();
 
 async function fbLogin() {
   try {
-    const firstName = "MyFirst";
-    const lastName = "MyLast";
-    const mobileNumber = "+910000000000";
-    const password = "MySecretPassword";
-    const dayInDob = "10";
-    const monthInDob = "Dec";
-    const yearInDob = "1999";
-    const gender = "Female";
-
-    await driver.manage().setTimeouts({ implicit: 4000 });
-
     
-    const createNewAccount = await driver.findElement(
-      By.xpath(
-        `//*[@role='button' and @data-testid='open-registration-form-button']`
-      )
-    );
     await createNewAccount.click();
     const inputFirstName = await driver.findElement(
       By.xpath("//input[@name='firstname']")

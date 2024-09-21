@@ -6,6 +6,8 @@ const driver = new Builder()
   .setChromeOptions(option)
   .build();
 
+import {accountDetails} from './credentials.js';
+
   async function openFaceBook(){
     driver.get.url("https://www.facebook.com");
     driver.manage().window().maximize();
@@ -23,6 +25,7 @@ const driver = new Builder()
   }
 
   async function enterAccountDetails(){
+    await driver.manage().setTimeouts({ implicit: 4000 });
 
   }
 
