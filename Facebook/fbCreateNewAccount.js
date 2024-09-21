@@ -8,7 +8,11 @@ const driver = new Builder()
   .setChromeOptions(option)
   .build();
 
-import{openFaceBook, verifyPageTitle, enterAccountDetails} from './functions';
+import {
+  openFaceBook,
+  verifyPageTitle,
+  enterAccountDetails,
+} from "./functions";
 
 openFaceBook();
 verifyPageTitle();
