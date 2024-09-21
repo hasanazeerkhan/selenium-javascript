@@ -13,40 +13,10 @@ import{openFaceBook, verifyPageTitle, enterAccountDetails} from './functions';
 openFaceBook();
 verifyPageTitle();
 enterAccountDetails();
+await driver.quit();
 
 async function fbLogin() {
   try {
-    
-    await createNewAccount.click();
-    const inputFirstName = await driver.findElement(
-      By.xpath("//input[@name='firstname']")
-    );
-    await inputFirstName.sendKeys(firstName);
-    console.log("Updated First Name");
-
-    const inputLastName = await driver.findElement(
-      By.xpath("//input[@name='lastname']")
-    );
-    await inputLastName.sendKeys(lastName);
-    console.log("Updated Last Name");
-
-    const inputMobileNumber = await driver.findElement(
-      By.xpath("//input[@name='reg_email__']")
-    );
-    await inputMobileNumber.sendKeys(mobileNumber);
-    console.log("Updated Mobile Number");
-
-    const inputPassword = await driver.findElement(
-      By.xpath("//input[@name='reg_passwd__']")
-    );
-    await inputPassword.sendKeys(password);
-    console.log("Updated Password");
-
-    const inputDayForDob = await driver.findElement(
-      By.xpath(`//*[@title='Day']/option[@value='${dayInDob}']`)
-    );
-    await inputDayForDob.click();
-
     {
       var selectableMonth = monthInDob;
       var i = 1;
@@ -130,7 +100,6 @@ async function fbLogin() {
     console.log("An error has been occurred ", error);
   } finally {
     console.log("Closing chrome....");
-    await driver.quit();
   }
 }
 fbLogin();

@@ -6,7 +6,7 @@ const driver = new Builder()
   .setChromeOptions(option)
   .build();
 
-import {accountDetails} from './credentials.js';
+import {account} from './credentials.js';
 
   async function openFaceBook(){
     driver.get.url("https://www.facebook.com");
@@ -26,7 +26,16 @@ import {accountDetails} from './credentials.js';
 
   async function enterAccountDetails(){
     await driver.manage().setTimeouts({ implicit: 4000 });
-
+    await driver.findElement(createNewAccount).click();
+    await driver.findElement(inputFirstName).sendKeys(account.firstName);
+    console.log("Updated First Name");
+    await driver.findElement(inputLastName).sendKeys(account.lastName);
+    console.log("Updated Last Name");
+    await driver.findElement(inputMobileNumber).sendKeys(account.mobileNumber);
+    console.log("Updated Mobile Number");
+    await driver.findElement(inputPassword).sendKeys(account.password);
+    console.log("Updated Password");
+    await inputDayForDob.click();
   }
 
   export{ openFaceBook, verifyPageTitle, enterAccountDetails}

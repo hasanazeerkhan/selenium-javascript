@@ -1,5 +1,8 @@
-const createNewAccount = await driver.findElement(
-    By.xpath(
-      `//*[@role='button' and @data-testid='open-registration-form-button']`
-    )
-  );
+const createNewAccount = "By.xpath(`//*[@role='button' and @data-testid='open-registration-form-button']`"
+const inputFirstName = "By.xpath(`//input[@name='firstname']`)"
+const inputLastName = "By.xpath(`//input[@name='lastname']`)"
+const inputMobileNumber = "By.xpath(`//input[@name='reg_email__']`)"
+const inputPassword = "By.xpath(`//input[@name='reg_passwd__']`)"
+const inputDayForDob = "By.xpath(`//*[@title='Day']/option[@value='${dayInDob}']`)"
+const inputMonthForDob = "By.xpath(`//*[@title='Month']/option[@value='${i}']`)"
+const inputYearForDob = "By.xpath(`//*[@title='Year']/option[@value='${yearInDob}']`)"
